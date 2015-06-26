@@ -40,7 +40,7 @@ Attribute           | Description   | Default
 
 ### 2. Run code through jQuery object
 
-	$(".ga").gaEvent();
+	$(".ga").bindGaEvent();
 
 ## Others...
 
