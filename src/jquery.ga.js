@@ -11,7 +11,6 @@
 		    	label = $(this).attr("data-ga-label") || "none";
 
 	    	$(this).on( evt , function() {
-	            event.preventDefault();
 	            ga(
 	                'send',
 	                'event',
@@ -21,6 +20,7 @@
 	            );
 	            if ($(this).is("[href]")) {
 	                if ($(this).attr("href") !== "#" && $(this).attr("target") !== "_blank") {
+	                	event.preventDefault();
 	                    var href = $(this).attr("href");
 	                    setTimeout(function() {
 	                        window.location = href;
